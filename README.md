@@ -104,6 +104,7 @@ __Running the above the code for both the images and for all three options__
 
 
 This is the original image and the details of elements are quite visible in this image.
+
 Dimensions of the image are 1040 x 780 px , taking size 2.50 MB
 
 
