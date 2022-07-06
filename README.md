@@ -104,7 +104,7 @@ __Running the above the code for both the images and for all three options__
 
 
 This is the original image and the details of elements are quite visible in this image.
-Dimensions of the image is 1040 x 780 px taking size 2.50 MB
+Dimensions of the image are 1040 x 780 px , taking size 2.50 MB
 
 
 
@@ -163,7 +163,7 @@ For example see the LED display on pole in the original it is more visible than 
 
 
 
-__Observation__ : Again difference is almost unnoticable but if we would look in deep then we may find notice. Also to differentiate we can see the size of both the images which are almost equivalent but not equal, this is again due to compression that happened while quantizing the image using kMeans. (Quantized Image = 2.1 MB, Original Image = 2.50 MB)
+__Observation__ : Again difference is almost unnoticable but if we would look in deep then we may find some differences. Also to differentiate we can see the size of both the images which are almost equivalent but not equal, this is again due to compression that happened while quantizing the image using kMeans. (Quantized Image = 2.1 MB, Original Image = 2.50 MB)
 
 
 
@@ -176,9 +176,9 @@ __Observation__ : Again difference is almost unnoticable but if we would look in
 
 
 
-This is the original image and details related to numbers, diffrent characters and their respective colors along with different shades and patterns are quite visible in this image. 
+This is the original image and the details related to numbers, diffrent characters and their respective colors along with different shades and patterns are quite visible in this image. 
 
-Dimensions of the image is 1788 x 1788 px taking size 1.88 MB
+Dimensions of the image are 1788 x 1788 px , taking size 1.88 MB
 
 
 
