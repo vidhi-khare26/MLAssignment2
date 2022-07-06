@@ -14,7 +14,7 @@
 
 ## Introduction
 
-As per the given problem we have to take two picture one of outdoor location and second of an object on the wall of your home and create a codebook and quantize the image.
+As per the given problem we have to take two picture one of outdoor location and second of an object on the wall of our home and create a codebook and quantize the image.
 
 
 We have to create 4 bit, 8 bit and 12 bit codebooks.
@@ -163,7 +163,7 @@ For example see the LED display on pole in the original it is more visible than 
 
 
 
-__Observation__ : Again difference is almost unnoticable but if we would look in deep then we may find notice. Also to differentiate we can see the size of both the images which are almost equivalent but not equal. (Quantized Image = 2.1 MB, Original Image = 2.50 MB)
+__Observation__ : Again difference is almost unnoticable but if we would look in deep then we may find notice. Also to differentiate we can see the size of both the images which are almost equivalent but not equal, this is again due to compression that happened while quantizing the image using kMeans. (Quantized Image = 2.1 MB, Original Image = 2.50 MB)
 
 
 
