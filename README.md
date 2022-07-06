@@ -224,7 +224,7 @@ array([[0.58825941, 0.40552151, 0.27330148],
 
 
 
-__Observation__ : The difference here are also almost unnoticable as was the case with outdoor image quantized with 256 colors (8 bits). We can see some difference in areas that were exposed to more light as compared to there surrounding but it is almost unnoticable but we can find difference when we zoom and analyse different area of the image. 
+__Observation__ : The differences here are also almost unnoticable as was the case with outdoor image quantized with 256 colors (8 bits). We can see some difference in areas that were exposed to more light as compared to there surrounding but it is almost unnoticable but we can find difference when we zoom and analyse different area of the image. 
 
 For example see the area of the two red strips, there are few spots which are in dark red color as compared to the original. This change in color is only visible after very close oservation of both the images.
 
@@ -236,4 +236,4 @@ For example see the area of the two red strips, there are few spots which are in
 
 
 
-__Observation__ : Difference in unnoticeable here even after very close observations. Also it could also be observed through the size of images which are almost equivalent (Quantized Image Size: 1.2 MB, Original Image Size: 1.88 MB). 
+__Observation__ : Difference is unnoticeable here even after very close observations. Also it could also be observed through the size of images which are almost equivalent (Quantized Image Size: 1.2 MB, Original Image Size: 1.88 MB). 
