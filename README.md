@@ -148,7 +148,7 @@ array([[0.3223426 , 0.24592218, 0.17529732],
 
 #### 8 Bits
 
-![outdoor_8](qto2.jpg)
+![outdoor_8](qto2.png)
 
 
 
