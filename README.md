@@ -166,7 +166,7 @@ array([[0.93726658, 0.9719419 , 0.97634523],
 
 
 
-__Observation__ : The difference is almost unnoticable. Because now we have 256 colors. We can see some difference in sharpness but it is almost unnoticable but we can find difference when we zoom and analyse different area of the image. 
+__Observation__ : The difference is almost unnoticable. Because now we have 256 colors. We can see some difference in sharpness but it is almost unnoticable but, we can find some differences when we zoom and analyse different area's of the image. 
 
 For example see the LED display on pole in the original it is more visible than that in the quantized image.
 
@@ -190,7 +190,7 @@ array([[0.82875165, 0.89547267, 0.95820758],
 
 
 
-__Observation__ : Again difference is almost unnoticable but if we would look in deep then we may find some differences. Also to differentiate we can see the size of both the images which are almost equivalent but not equal, this is again due to compression that happened while quantizing the image using kMeans. (Quantized Image = 2.1 MB, Original Image = 2.50 MB)
+__Observation__ : Again difference is almost unnoticable but if we would look in deep, then we may find some differences. To differentiate we can observe the size of both the images which are clearly not equivalent, this is due to compression that happened while quantizing the image. (Quantized Image = 440 KB, Original Image = 1.88 MB)
 
 __Codebook__ 
 
@@ -257,6 +257,7 @@ array([[0.78076694, 0.76355564, 0.7414921 ],
 ```
 
 
+
 #### 8 Bits
 
 ![indoor_8](Images/qti2.jpg)
@@ -265,7 +266,7 @@ array([[0.78076694, 0.76355564, 0.7414921 ],
 
 __Observation__ : The differences here are also almost unnoticable as was the case with outdoor image quantized with 256 colors (8 bits). We can see some difference in areas that were exposed to more light as compared to there surrounding but it is almost unnoticable but we can find difference when we zoom and analyse different area of the image. 
 
-For example see the area of the two red strips, there are few spots which are in dark red color as compared to the original. This change in color is only visible after very close oservation of both the images.
+For example see the area of the two red strips and a green strip on the left, there are few places which are in dark shade of there respective colors as compared to the original. This change in color is only visible after very close oservation of both the images.
 
 __Codebook__ 
 
@@ -287,7 +288,7 @@ array([[0.68549135, 0.66162301, 0.62009528],
 
 
 
-__Observation__ : Difference is unnoticeable here even after very close observations. Also it could also be observed through the size of images which are almost equivalent (Quantized Image Size: 1.2 MB, Original Image Size: 1.88 MB). 
+__Observation__ : Difference is unnoticeable here even after very close observations. To differentiate we can observe the size of both the images which are clearly not equivalent, this is due to compression that happened while quantizing the image. (Quantized Image = 440 KB, Original Image = 1.88 MB)
 
 __Codebook__ 
 
@@ -302,4 +303,14 @@ array([[0.80392157, 0.81764706, 0.83627451],
 ```
 
 
+
+## Outdoor vs Indoor Image Quantization
+
+To differentiate between the effect of quantization on the Indoor and Outdoor image we are considering 4 Bits quantized image of both categories as here we could clearly observe the effect of quantization on the original images's.
+
+
+__Observation__ : It could be seen that the outdoor image quality dropped much more as compared to the indoor image. This is due to the reason that the outdoor image has more color shades, thereby it got pixelated more.
+
+
+There is a significant differnce in the percentage of compression in both images as for Outdoor Image we have compression as 1536 KB - 76 KB =  1460 KB and compression percentage as (1460 / 1536) * 100 = 95%, and for Indoor image we have compression as  
 
