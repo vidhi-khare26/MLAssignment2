@@ -162,7 +162,7 @@ array([[0.93726658, 0.9719419 , 0.97634523],
 
 #### 8 Bits
 
-![outdoor_8](Images/qto2.jpg)
+![outdoor_8](Images/qto2.png)
 
 
 
@@ -233,7 +233,9 @@ Now lets look at 4 bit quantized image
 
 __Observations__ : The difference is clearly visible here, Look at the wall the different shade of color white are not clearly visble here and also the shadow of the calendar with black-grey color is now having different patches of color ditinctively visible.
 
-In other parts of the calendar too the colors are now dull as compared to the original image and the shades of pink and light yellow are not visible at all. And why so, the reason is again the same as above, the original image that we had was composed of somewhat around 96,615 colors but here we have quantized the image into 4 bit, that is only 16 colors.
+In other parts of the calendar too the colors are now dull as compared to the original image and the shades of pink and light yellow are not visible at all. And why so, the reason is same as above, the original image that we had was composed of several colors but here we have quantized the image into 4 bit, that is only 16 colors. 
+
+But as compared to the outdoor image quantization for 4 Bits, here we do not any siginificant quality drop and compression compared to the original indoor image, this is due to the reason that outdoor image had more color shades whereas here the image never had that many colors to begin with.
 
 __Codebook__ 
 
@@ -301,16 +303,3 @@ array([[0.80392157, 0.81764706, 0.83627451],
        [0.78823529, 0.78431373, 0.77647059],
        [0.59869281, 0.56862745, 0.52679739]])
 ```
-
-
-
-## Outdoor vs Indoor Image Quantization
-
-To differentiate between the effect of quantization on the Indoor and Outdoor image we are considering 4 Bits quantized image of both categories as here we could clearly observe the effect of quantization on the original images's.
-
-
-__Observation__ : It could be seen that the outdoor image quality dropped much more as compared to the indoor image. This is due to the reason that the outdoor image has more color shades, thereby it got pixelated more.
-
-
-There is a significant differnce in the percentage of compression in both images as for Outdoor Image we have compression as 1536 KB - 76 KB =  1460 KB and compression percentage as (1460 / 1536) * 100 = 95%, and for Indoor image we have compression as  
-
