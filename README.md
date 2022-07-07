@@ -190,7 +190,7 @@ array([[0.82875165, 0.89547267, 0.95820758],
 
 
 
-__Observation__ : Again difference is almost unnoticable but if we would look in deep, then we may find some differences. To differentiate we can observe the size of both the images which are clearly not equivalent, this is due to compression that happened while quantizing the image. (Quantized Image = 440 KB, Original Image = 1.88 MB)
+__Observation__ : Again difference is almost unnoticable but if we would look in deep, then we may find some differences. To differentiate, we can observe the size of both the images which are clearly not equivalent, this is due to compression that happened while quantizing the image. (Quantized Image = 440 KB, Original Image = 1.88 MB)
 
 __Codebook__ 
 
@@ -231,11 +231,11 @@ Now lets look at 4 bits quantized image
 
 
 
-__Observations__ : The difference is clearly visible here, Look at the wall the different shade of color white are not clearly visble here and also the shadow of the calendar with black-grey color is now having different patches of color ditinctively visible.
+__Observations__ : The difference is clearly visible here, Look at the wall the different shade of color white are not clearly visble here, and also the shadow of the calendar with black-grey color is now having different patches of color ditinctively visible.
 
 In other parts of the calendar too the colors are now dull as compared to the original image and the shades of pink and light yellow are not visible at all. And why so, the reason is same as above, the original image that we had was composed of several colors but here we have quantized the image into 4 bit, that is only 16 colors. 
 
-But as compared to the outdoor image quantization for 4 Bits, here we do not any siginificant quality drop and compression compared to the original indoor image, this is due to the reason that outdoor image had more color shades whereas here the image never had that many colors to begin with.
+But, as compared to the outdoor image quantization for 4 Bits, here, we do not see siginificant quality drop and compression as compared to the original indoor image, this is due to the reason that outdoor image had more color shades whereas here, the image never had that many colors to begin with.
 
 __Codebook__ 
 
@@ -266,9 +266,9 @@ array([[0.78076694, 0.76355564, 0.7414921 ],
 
 
 
-__Observation__ : The differences here are also almost unnoticable as was the case with outdoor image quantized with 256 colors (8 bits). We can see some difference in areas that were exposed to more light as compared to there surrounding but it is almost unnoticable but we can find difference when we zoom and analyse different area of the image. 
+__Observation__ : The differences here are also almost unnoticable as was the case with outdoor image quantized with 256 colors (8 bits). We can see some difference in areas that were exposed to more light as compared to there surrounding but it is almost unnoticable but, we can find difference when we zoom and analyse different area of the image. 
 
-For example see the area of the two red strips and a green strip on the left, there are few places which are in dark shade of there respective colors as compared to the original. This change in color is only visible after very close oservation of both the images.
+For example see the area of the two red strips and a green strip on the left, there are few places which are in darker shade of there respective colors as compared to the original. This change in color is only visible after very close oservation of both the images.
 
 __Codebook__ 
 
@@ -290,7 +290,7 @@ array([[0.68549135, 0.66162301, 0.62009528],
 
 
 
-__Observation__ : Difference is unnoticeable here even after very close observations. To differentiate we can observe the size of both the images which are clearly not equivalent, this is due to compression that happened while quantizing the image. (Quantized Image = 440 KB, Original Image = 1.88 MB)
+__Observation__ : Difference is unnoticeable here even after very close observations. To differentiate, we can observe the size of both the images which are clearly not equivalent, this is due to compression that happened while quantizing the image. (Quantized Image = 440 KB, Original Image = 1.88 MB)
 
 __Codebook__ 
 
