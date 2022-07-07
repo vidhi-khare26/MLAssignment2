@@ -113,7 +113,7 @@ __Running the above the code for both the images and for all three options__
 
 #### Original Image
 
-![outdoor_img](Outdoor.jpg)
+![outdoor_img](Images/Outdoor.jpg)
 
 
 
@@ -129,7 +129,7 @@ Dimensions of the image are 1040 x 780 px , taking size 2.50 MB
 
 Now lets look 4 bit quantize image 
 
-![outdoor_4](qto1.jpg)
+![outdoor_4](Images/qto1.jpg)
 
 
 
@@ -140,29 +140,29 @@ The same difference can be seen on floor in the image. There are different shade
 __Codebook__ 
 
 ```python
-array([[0.3223426 , 0.24592218, 0.17529732],
-       [0.78712174, 0.85432532, 0.90667613],
-       [0.47764182, 0.4596491 , 0.43585597],
-       [0.15251028, 0.11741676, 0.10603203],
-       [0.63644951, 0.64417844, 0.62927175],
-       [0.94124689, 0.9739545 , 0.97822212],
-       [0.39496972, 0.35731082, 0.32094564],
-       [0.90907283, 0.81005503, 0.68769283],
-       [0.26216115, 0.2610399 , 0.26019431],
-       [0.85284311, 0.91276604, 0.95627993],
-       [0.31143346, 0.14136356, 0.13131114],
-       [0.71412018, 0.72267153, 0.71254054],
-       [0.56905868, 0.55607564, 0.5326591 ],
-       [0.91032138, 0.91559276, 0.88173225],
-       [0.82479528, 0.64079125, 0.51565052],
-       [0.19362266, 0.16895232, 0.15183069]])
+array([[0.93726658, 0.9719419 , 0.97634523],
+       [0.32478721, 0.24776073, 0.17619611],
+       [0.59194273, 0.57783967, 0.55052484],
+       [0.14667704, 0.11229013, 0.10231122],
+       [0.72666404, 0.73279874, 0.71828243],
+       [0.87482564, 0.91293266, 0.92648045],
+       [0.46281561, 0.43701454, 0.40398189],
+       [0.27173352, 0.27174446, 0.27142382],
+       [0.22234853, 0.20654557, 0.19263601],
+       [0.65003691, 0.66176019, 0.64855794],
+       [0.39052181, 0.35158228, 0.31558428],
+       [0.85440819, 0.67939137, 0.54883467],
+       [0.31372736, 0.1425629 , 0.13139668],
+       [0.79085646, 0.85893306, 0.91240734],
+       [0.17942231, 0.14958037, 0.13338987],
+       [0.50097124, 0.49017918, 0.47317422]])
 ```
 
 
 
 #### 8 Bits
 
-![outdoor_8](qto2.png)
+![outdoor_8](Images/qto2.jpg)
 
 
 
@@ -170,15 +170,39 @@ __Observation__ : The difference is almost unnoticable. Because now we have 256 
 
 For example see the LED display on pole in the original it is more visible than that in the quantized image.
 
+__Codebook__ 
+
+```python
+array([[0.82875165, 0.89547267, 0.95820758],
+       [0.30100649, 0.22996485, 0.16356342],
+       [0.56185826, 0.55431763, 0.53745829],
+       ...,
+       [0.4523981 , 0.45476341, 0.46058318],
+       [0.8442741 , 0.89956207, 0.94962243],
+       [0.7105037 , 0.71831447, 0.71072647]])
+```
+
 
 
 #### 12 Bits
 
-![outdoor_12](qto3.jpg)
+![outdoor_12](Images/qto3.jpg)
 
 
 
 __Observation__ : Again difference is almost unnoticable but if we would look in deep then we may find some differences. Also to differentiate we can see the size of both the images which are almost equivalent but not equal, this is again due to compression that happened while quantizing the image using kMeans. (Quantized Image = 2.1 MB, Original Image = 2.50 MB)
+
+__Codebook__ 
+
+```python
+array([[0.90784314, 0.9620915 , 0.99281046],
+       [0.79934641, 0.85424837, 0.89738562],
+       [0.18823529, 0.16078431, 0.1372549 ],
+       ...,
+       [0.18980392, 0.14431373, 0.1372549 ],
+       [0.32941176, 0.2627451 , 0.19215686],
+       [0.75222816, 0.82388592, 0.90196078]])
+```
 
 
 
@@ -187,7 +211,7 @@ __Observation__ : Again difference is almost unnoticable but if we would look in
 
 #### Original Image
 
-![indoor_img](Indoor.jpg)
+![indoor_img](Images/Indoor.jpg)
 
 
 
@@ -203,7 +227,7 @@ Dimensions of the image are 1788 x 1788 px , taking size 1.88 MB
 
 Now lets look at 4 bit quantized image 
 
-![indoor_4](qti1.jpg)
+![indoor_4](Images/qti1.jpg)
 
 
 
@@ -214,28 +238,28 @@ In other parts of the calendar too the colors are now dull as compared to the or
 __Codebook__ 
 
 ```python
-array([[0.58825941, 0.40552151, 0.27330148],
-       [0.72082246, 0.69197447, 0.66012571],
-       [0.30825965, 0.26950553, 0.22492618],
-       [0.57226819, 0.53275326, 0.51013481],
-       [0.75868721, 0.73798781, 0.71377821],
-       [0.80268746, 0.69905632, 0.24119883],
-       [0.05225487, 0.31411629, 0.65198797],
-       [0.47412371, 0.44829162, 0.43741813],
-       [0.6584676 , 0.62125185, 0.59165653],
-       [0.81972774, 0.82136291, 0.83386841],
-       [0.13707328, 0.11177452, 0.08695134],
-       [0.22543229, 0.18313983, 0.15149711],
-       [0.50700343, 0.1773512 , 0.19824294],
-       [0.52268325, 0.62303913, 0.73819978],
-       [0.39891186, 0.36038528, 0.33484941],
-       [0.79234188, 0.77741057, 0.75764695]])
+array([[0.78076694, 0.76355564, 0.7414921 ],
+       [0.37632788, 0.33785516, 0.30356201],
+       [0.6558868 , 0.61992363, 0.59130568],
+       [0.16446724, 0.13415107, 0.10772411],
+       [0.05189985, 0.35420003, 0.73018466],
+       [0.73262767, 0.70443735, 0.67245428],
+       [0.79372106, 0.68820899, 0.24116885],
+       [0.45426346, 0.15840114, 0.15903256],
+       [0.47496465, 0.42510148, 0.39868031],
+       [0.44887361, 0.55388696, 0.67928409],
+       [0.54673653, 0.23738874, 0.22914348],
+       [0.04840409, 0.27317529, 0.57215391],
+       [0.81878979, 0.81514184, 0.81948275],
+       [0.62230163, 0.69375663, 0.77574612],
+       [0.55807078, 0.51595299, 0.49261033],
+       [0.27732266, 0.24068791, 0.20107717]])
 ```
 
 
 #### 8 Bits
 
-![indoor_8](qti2.jpg)
+![indoor_8](Images/qti2.jpg)
 
 
 
@@ -243,12 +267,39 @@ __Observation__ : The differences here are also almost unnoticable as was the ca
 
 For example see the area of the two red strips, there are few spots which are in dark red color as compared to the original. This change in color is only visible after very close oservation of both the images.
 
+__Codebook__ 
+
+```python
+array([[0.68549135, 0.66162301, 0.62009528],
+       [0.28637873, 0.23712233, 0.19305301],
+       [0.79483325, 0.7560939 , 0.77680287],
+       ...,
+       [0.801444  , 0.61112649, 0.59092184],
+       [0.36070604, 0.44580446, 0.5362373 ],
+       [0.76376365, 0.6936304 , 0.67627486]])
+```
+
 
 
 #### 12 Bits
 
-![indoor_12](qti3.jpg)
+![indoor_12](Images/qti3.jpg)
 
 
 
 __Observation__ : Difference is unnoticeable here even after very close observations. Also it could also be observed through the size of images which are almost equivalent (Quantized Image Size: 1.2 MB, Original Image Size: 1.88 MB). 
+
+__Codebook__ 
+
+```python
+array([[0.80392157, 0.81764706, 0.83627451],
+       [0.43333333, 0.38235294, 0.32941176],
+       [0.65294118, 0.64183007, 0.62810458],
+       ...,
+       [0.77254902, 0.79215686, 0.77647059],
+       [0.78823529, 0.78431373, 0.77647059],
+       [0.59869281, 0.56862745, 0.52679739]])
+```
+
+
+
