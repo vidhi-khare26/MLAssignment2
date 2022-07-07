@@ -127,7 +127,7 @@ Dimensions of the image are 1040 x 780 px , taking size 2.50 MB
 
 
 
-Now lets look 4 bit quantize image 
+Now lets look at 4 bits quantized image 
 
 ![outdoor_4](Images/qto1.jpg)
 
@@ -225,7 +225,7 @@ Dimensions of the image are 1788 x 1788 px , taking size 1.88 MB
 
 
 
-Now lets look at 4 bit quantized image 
+Now lets look at 4 bits quantized image 
 
 ![indoor_4](Images/qti1.jpg)
 
