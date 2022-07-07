@@ -34,16 +34,30 @@ Color quantization can be done using clustering  where each of the color pixels 
 
 - python jupyter
 - numpy
-- KMeans , from sklearn
+- MiniBatchKMeans, from sklearn
 - matplotlib
 - Pillow (for image loading saving etc.)
+
+
+
+## MiniBatchKMeans
+
+Mini Batch K-means algorithm‘s is a form a KMeans where the main idea is to use small random batches of data of a fixed size, so they can be stored in memory. Each iteration a new random sample from the dataset is obtained and used to update the clusters and this is repeated until convergence.
+
+
+
+## Reason of using MiniBatchKMeans
+
+Reason for using MiniBatchKMeans over KMeans is simply that for 8 Bits and 12 Bits Quantization, KMean is very expensive in terms of temporal and spatial cost.
+
+
 
 ## Procedure
 
 - Going to get the images and then load those in our project and then will convert them into an np array (in 8 bit color image)
 - Get the original shape of the image ie width, height and depth
 - Reshaping the image array
-- Use KMeans forming clusters and no of clusters is no of colors 
+- Use MiniBatchKMeans forming clusters and no of clusters is no of colors 
 - Recreating the image back and write the obervations.
 
 
@@ -70,7 +84,7 @@ w, h, d = original_shape = tuple(image.shape)
 image_array = np.reshape(image, (w * h, 3))
 
 print("---------- Fitting model ----------")
-kmeans = KMeans(n_clusters=n_colors, random_state=0).fit(image_array)
+kmeans = MiniBatchKMeans(n_clusters=n_colors, random_state=0).fit(image_array)
 
 # Get labels for all points
 print("Predicting color indices on the full image (k-means)")
@@ -83,7 +97,7 @@ def recreate_image(codebook, labels, w, h):
 # Displaying and Saving the Quantized image
 plt.axis("off")
 print(f"Quantized image ({n_colors} colors, K-Means)")
-plt.imsave("qti.jpg", recreate_image(kmeans.cluster_centers_, labels, w, h))
+plt.imsave("qti1.jpg", recreate_image(kmeans.cluster_centers_, labels, w, h))
 plt.imshow(recreate_image(kmeans.cluster_centers_, labels, w, h))
 
 ```
